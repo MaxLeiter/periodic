@@ -200,10 +200,13 @@ draw_table:
     line(0, 17, 72, 17)
     line(0, 13, 72, 13)
     line(0, 9, 72, 9)
-    line(0, 5, 72, 5)
-    line(12, 1, 44, 1) ; Main group, top to bottom
 
-    line(0, 1, 8, 1) ; Bottom left, one-shot
+    line(12, 1, 44, 1) ; Main group, top to bottom
+    
+    line(0, 5, 8, 5) ; Just above bottom left, two elements before break
+    line(12, 5, 72, 5) ; Elements after top break
+    
+    line(0, 1, 8, 1) ; Bottom left, two elements before break
 
     ; Upper section, vertical
     line(0, 29, 0, 1) ; Left to right
@@ -228,7 +231,7 @@ draw_table:
     lower_looplines(-4, 9, -4, 1, 16) ; Left to right
 
     ld d, 12
-    ld e, 32
+    ld e, 28
     ld h, 12
     ld l, 39
     pcall(drawLine) ; Connect the upper and lower tables
